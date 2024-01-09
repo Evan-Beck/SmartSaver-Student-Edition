@@ -31,5 +31,10 @@ public class BankAccount {
     public List<String> getTransactionHistory() {
         return transactionHistory;
     }
+    public void applyInterest(double rate, double time) {
+        double interest = balance * rate * time;
+        balance += interest;
+        transactionHistory.add("Interest Applied: $" + interest);
+    }
 }
 
